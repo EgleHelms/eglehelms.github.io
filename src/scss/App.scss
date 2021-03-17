@@ -1,0 +1,275 @@
+$primary: rgb(17, 1, 39);
+$transparentPink: #754092e0;
+$white: #fbb031;
+$lines: rgb(201, 6, 185);
+$linesFoc: white;
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Assistant', sans-serif;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: $primary;
+
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content:space-between;
+    width: 20vh;
+  }
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: $white;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
+.banner {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary;
+}
+
+h1{
+  text-align: center;
+  background-image: url("../assets/video-bg.gif");
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+  background-clip: border-box;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  font-size: 12vw;
+  line-height: 0.8;
+  font-weight: 900;
+  align-items: center;
+
+  &::after {
+    content: "Full-Stack Web Developer";
+    font-size: 50%;
+  }
+}
+
+.projContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 80px 0 50px 0;
+
+  &::before{
+    content: "My Projects";
+    font-size: 15vw;
+    color: $transparentPink;
+
+    @media (min-width: 768px) {
+      font-size: 15vw;
+    }
+  }
+}
+
+.projItem {
+  list-style-type: none;
+  margin: 10px;
+
+  .innerItem {
+    text-decoration: none;
+    margin: 10px;
+  }
+  
+  .innerItem h3{
+    margin: 10px;
+    color: $primary;
+    border-bottom: 2px solid $white;
+  }
+
+  .innerItem h6{
+    font-weight: 100;
+    margin: 10px;
+    font-size: 0.9rem;
+  }
+
+  .innerItem p{
+    margin: 10px;
+    font-weight: 100;
+    max-width: 400px;
+  }
+
+  .innerItem  .demo-links span a{
+    margin: 10px;
+    color: $primary;
+    text-decoration: none;
+    border-bottom: 1px solid $white;
+  }
+}
+
+.footer{
+  position: relative;
+  bottom: 0;
+  background-color: $primary;
+  color: $white;
+  overflow: hidden;
+}
+
+.social-links{
+  display: flex;
+  align-items: center;
+  width: 98vw;
+  justify-content: center;
+
+  li {
+    margin: 30px 0;
+    padding: 0 10px 0 10px;
+    list-style-type: none;
+    background-color: $primary;
+
+   span a{
+    color: $white;
+    font-size: 1.5rem;
+    }
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 0 50px 0;
+  flex-basis: 80%;
+
+  &::before{
+    content: "Contact me";
+    font-size: 15vw;
+    color: $transparentPink;
+    z-index: 9999;
+
+    @media (min-width: 768px) {
+      font-size: 10vw;
+    }
+  }
+
+
+  input{
+    border: 0.2px $white solid;
+    border-radius: 50px;
+    height: 2rem;
+
+    &:focus {
+      border-radius: 50px;
+      outline: none;
+      padding: 0 10px;
+    }
+
+    &[type="submit"] {
+      background-color: $white;
+      font-size: 1rem;
+      line-height: 2rem;
+      width: 20%;
+      margin: auto;
+      margin-top: 10px;
+
+      @media (max-width: 768px) {
+        width: 100px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      
+    }
+  }
+
+  textarea{
+    border: 0.2px $white solid;
+    border-radius: 10px;
+
+    &:focus {
+      outline: none;
+      padding: 10px 0 0 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    flex-basis: 50%;
+  }
+}
+
+.contact-form{
+  margin: 5% 0 0 0 ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sectionHead{
+  @media (max-width: 768px) {
+    font-size: 10vw;
+  }
+}
+
+.about-me {
+  background: linear-gradient(
+    0deg,
+    rgba(230, 213, 255, 0.719),
+    rgba(234, 220, 255, 0.788)
+  ),
+  url("../assets/video-bg.gif");
+  background-size: cover;
+  min-height: 40vh;
+  padding: 3%;
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: 10px;
+  }
+  
+  .desc {
+    margin-top: 40px;
+    padding-left: 20px;
+    max-width: 600px;
+  }
+
+  h5 {
+    color: $primary;
+  }
+
+  p{
+    color: $primary;
+    font-weight: 300;
+    padding: 20px 0;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 8vw;
+    font-weight: 400;
+    color: $transparentPink;
+    padding: 0 0 30px 0;
+    flex-basis: 100%;
+  }
+
+  h5 {
+    font-size: 3vh;
+  }
+
+  @media (max-width: 768px) {
+    
+  }
+}
+
